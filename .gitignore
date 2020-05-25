@@ -84,5 +84,3 @@ android/app/google-services.json
 ios/app/dropbox.key
 ios/app/GoogleService-Info.plist
 
-/android/sdk/jitsi-maven-repository/releases/com/
-/android/sdk/jitsi-maven-repository/releases/org/
