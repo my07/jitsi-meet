@@ -1,10 +1,10 @@
 // @flow
 
-import { NativeModules } from 'react-native';
+//import { NativeModules } from 'react-native';
 
-import LANGUAGES_RESOURCES from '../../../../lang/languages.json';
+//import LANGUAGES_RESOURCES from '../../../../lang/languages.json';
 
-const LANGUAGES = Object.keys(LANGUAGES_RESOURCES);
+//const LANGUAGES = Object.keys(LANGUAGES_RESOURCES);
 
 /**
  * The singleton language detector for React Native which uses the system-wide
@@ -19,15 +19,16 @@ export default {
     cacheUserLanguage: Function.prototype,
 
     detect() {
-        const { LocaleDetector } = NativeModules;
-        const [ lang, region ] = LocaleDetector.locale.replace(/_/, '-').split('-');
-        const locale = `${lang}${region}`;
+        //const { LocaleDetector } = NativeModules;
+        //const [ lang, region ] = LocaleDetector.locale.replace(/_/, '-').split('-');
+        //const locale = `${lang}${region}`;
 
-        if (LANGUAGES.includes(locale)) {
-            return locale;
-        }
+        //if (LANGUAGES.includes(locale)) {
+            //return locale;
+        //}
 
-        return lang;
+        //return lang;
+        return 'tr-TR';
     },
 
     init: Function.prototype,

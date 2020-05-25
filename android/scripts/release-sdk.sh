@@ -4,7 +4,7 @@ set -e -u
 
 
 THIS_DIR=$(cd -P "$(dirname "$(readlink "${BASH_SOURCE[0]}" || echo "${BASH_SOURCE[0]}")")" && pwd)
-DEFAULT_MVN_REPO="${THIS_DIR}/../../../jitsi-maven-repository/releases"
+DEFAULT_MVN_REPO="${THIS_DIR}/../sdk/jitsi-maven-repository/releases"
 THE_MVN_REPO=${MVN_REPO:-${1:-$DEFAULT_MVN_REPO}}
 MVN_HTTP=0
 DEFAULT_SDK_VERSION=$(grep sdkVersion ${THIS_DIR}/../gradle.properties | cut -d"=" -f2)
@@ -106,6 +106,9 @@ if [[ $DO_GIT_TAG == 1 ]]; then
     # Tag the release
     git tag android-sdk-${SDK_VERSION}
 fi
+
+cd $DEFAULT_MVN_REPO
+find . -type f -exec curl --user admin:sun2020orema --ftp-create-dirs -T {} https://nexus.orema.com.tr/repository/orema/{} \;
 
 # Done!
 echo "Finished! Don't forget to push the tag and the Maven repo artifacts."
