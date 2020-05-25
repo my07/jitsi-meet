@@ -276,7 +276,7 @@
         "unlockRoom": "Toplantı şifresini kaldır",
         "userPassword": "kullanıcı şifre",
         "WaitForHostMsg": "<b> {{room}} </b> konferansı henüz başlamadı. Toplantı sahibi sizseniz, lütfen kimlik doğrulaması yapın. Aksi takdirde, lütfen toplantı sahibinin gelmesini bekleyin.",
-        "WaitForHostMsgWOk": "<b> {{room}} </b> konferansı henüz başlamadı. Toplantı sahibi sizseniz, lütfen kimlik doğrulaması için Tamam'a basın. Aksi takdirde, lütfen toplantı sahibinin gelmesini bekleyin.",
+        "WaitForHostMsgWOk": "<b> {{room}} </b> konferansı henüz başlamadı. Toplantı sahibi sizseniz, lütfen kimlik doğrulaması yaparak odaya girin. Aksi takdirde, toplantı sahibinin gelmesini bekleyin.",
         "WaitingForHost": "Toplantı sahibi bekleniyor ...",
         "Yes": "Evet",
         "yourEntireScreen": "Tüm ekranınız"
@@ -773,5 +773,8 @@
     "lonelyMeetingExperience": {
         "button": "Başkalarını davet et",
         "youAreAlone": "Toplantıdaki tek kişisiniz"
+    },
+    "security": {
+        "insecureRoomNameWarning": "Oda adı güvenli değil"
     }
 }

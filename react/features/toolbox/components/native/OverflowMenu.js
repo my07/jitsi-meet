@@ -2,7 +2,6 @@
 
 import React, { PureComponent } from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import Collapsible from 'react-native-collapsible';
 
 import { ColorSchemeRegistry } from '../../../base/color-scheme';
 import { BottomSheet, hideDialog, isDialogOpen } from '../../../base/dialog';
@@ -12,16 +11,11 @@ import { StyleType } from '../../../base/styles';
 import { SharedDocumentButton } from '../../../etherpad';
 import { InviteButton } from '../../../invite';
 import { AudioRouteButton } from '../../../mobile/audio-mode';
-import { LiveStreamButton, RecordButton } from '../../../recording';
 import { RoomLockButton } from '../../../room-lock';
 import { ClosedCaptionButton } from '../../../subtitles';
-import { TileViewButton } from '../../../video-layout';
 import HelpButton from '../HelpButton';
 
 import AudioOnlyButton from './AudioOnlyButton';
-import MoreOptionsButton from './MoreOptionsButton';
-import RaiseHandButton from './RaiseHandButton';
-import ToggleCameraButton from './ToggleCameraButton';
 import styles from './styles';
 
 /**
@@ -105,18 +99,11 @@ class OverflowMenu extends PureComponent<Props, State> {
      */
     render() {
         const { _bottomSheetStyles } = this.props;
-        const { showMore } = this.state;
 
         const buttonProps = {
             afterClick: this._onCancel,
             showLabel: true,
             styles: _bottomSheetStyles.buttons
-        };
-
-        const moreOptionsButtonProps = {
-            ...buttonProps,
-            afterClick: this._onToggleMenu,
-            visible: !showMore
         };
 
         return (
@@ -127,18 +114,9 @@ class OverflowMenu extends PureComponent<Props, State> {
                 <AudioRouteButton { ...buttonProps } />
                 <InviteButton { ...buttonProps } />
                 <AudioOnlyButton { ...buttonProps } />
-                <RaiseHandButton { ...buttonProps } />
-                <MoreOptionsButton { ...moreOptionsButtonProps } />
-                <Collapsible collapsed = { !showMore }>
-                    <ToggleCameraButton { ...buttonProps } />
-                    <TileViewButton { ...buttonProps } />
-                    <RecordButton { ...buttonProps } />
-                    <LiveStreamButton { ...buttonProps } />
-                    <RoomLockButton { ...buttonProps } />
-                    <ClosedCaptionButton { ...buttonProps } />
-                    <SharedDocumentButton { ...buttonProps } />
-                    <HelpButton { ...buttonProps } />
-                </Collapsible>
+                <RoomLockButton { ...buttonProps } />
+                <SharedDocumentButton { ...buttonProps } />
+                <HelpButton { ...buttonProps } />
             </BottomSheet>
         );
     }

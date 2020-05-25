@@ -97,7 +97,8 @@ class Toolbox extends PureComponent<Props> {
      */
     _renderToolbar() {
         const { _styles } = this.props;
-        const { buttonStyles, buttonStylesBorderless, hangupButtonStyles, toggledButtonStyles } = _styles;
+        const { buttonStyles, buttonStylesBorderless, hangupButtonStyles,
+            toggledButtonStyles } = _styles;
 
         return (
             <View

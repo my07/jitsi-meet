@@ -9,6 +9,11 @@ import { getFeatureFlag, MEETING_NAME_ENABLED } from '../../../base/flags';
 import { connect } from '../../../base/redux';
 import { PictureInPictureButton } from '../../../mobile/picture-in-picture';
 import { isToolboxVisible } from '../../../toolbox';
+import RaiseHandButton
+    from '../../../toolbox/components/native/RaiseHandButton';
+import ToggleCameraButton
+    from '../../../toolbox/components/native/ToggleCameraButton';
+import { TileViewButton } from '../../../video-layout/components';
 import ConferenceTimer from '../ConferenceTimer';
 
 import styles, { NAVBAR_GRADIENT_COLORS } from './styles';
@@ -45,6 +50,11 @@ class NavigationBar extends Component<Props> {
         if (!this.props._visible) {
             return null;
         }
+        const buttonProps = {
+            afterClick: this._onCancel,
+            showLabel: false,
+            styles: styles.navBarButtonSmall
+        };
 
         return [
             <LinearGradient
@@ -74,6 +84,14 @@ class NavigationBar extends Component<Props> {
                         </Text>
                     }
                     <ConferenceTimer />
+                </View>
+                <View
+                    accessibilityRole = 'toolbar'
+                    pointerEvents = 'box-none'
+                    style = { styles.toolbar }>
+                    <RaiseHandButton { ...buttonProps } />
+                    <TileViewButton { ...buttonProps } />
+                    <ToggleCameraButton { ...buttonProps } />
                 </View>
             </View>
         ];

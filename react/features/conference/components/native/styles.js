@@ -105,6 +105,17 @@ export default {
         underlayColor: 'transparent'
     },
 
+    navBarButtonSmall: {
+        iconStyle: {
+            color: ColorPalette.white,
+            fontSize: 20,
+            paddingLeft: 25,
+            marginTop: 10
+        },
+
+        underlayColor: 'transparent'
+    },
+
     navBarContainer: {
         flexDirection: 'column',
         left: 0,
@@ -143,7 +154,8 @@ export default {
 
     roomNameWrapper: {
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        top: 10,
         left: 0,
         paddingHorizontal: 48,
         position: 'absolute',
@@ -172,8 +184,66 @@ export default {
 
     insecureRoomNameLabel: {
         backgroundColor: INSECURE_ROOM_NAME_LABEL_COLOR
+    },
+
+    /**
+     * The style of the toolbar.
+     */
+    toolbar: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        flexGrow: 1,
+        justifyContent: 'flex-end',
+        marginBottom: BoxModel.margin / 2,
+        paddingHorizontal: BoxModel.margin
     }
 };
+
+const BUTTON_SIZE = 50;
+
+/**
+ * The style of toolbar buttons.
+ */
+const toolbarButton = {
+    backgroundColor: schemeColor('button'),
+    borderRadius: BUTTON_SIZE / 2,
+    borderWidth: 0,
+    flex: 0,
+    flexDirection: 'row',
+    height: BUTTON_SIZE,
+    justifyContent: 'center',
+
+    // XXX We probably tested BoxModel.margin and discovered it to be too small
+    // for our taste.
+    marginHorizontal: 7,
+    width: BUTTON_SIZE
+};
+
+/**
+ * The icon style of the toolbar buttons.
+ */
+const toolbarButtonIcon = {
+    alignSelf: 'center',
+    color: ColorPalette.darkGrey,
+    fontSize: 22
+};
+
+/**
+ * The style of toolbar buttons which display white icons.
+ */
+const whiteToolbarButton = {
+    ...toolbarButton,
+    backgroundColor: schemeColor('buttonToggled')
+};
+
+/**
+ * The icon style of toolbar buttons which display white icons.
+ */
+const whiteToolbarButtonIcon = {
+    ...toolbarButtonIcon,
+    color: ColorPalette.white
+};
+
 
 ColorSchemeRegistry.register('Conference', {
     lonelyButton: {
@@ -182,5 +252,26 @@ ColorSchemeRegistry.register('Conference', {
 
     lonelyMessage: {
         color: schemeColor('onVideoText')
+    },
+
+    buttonStylesBorderless: {
+        iconStyle: whiteToolbarButtonIcon,
+        style: {
+            ...toolbarButton,
+            backgroundColor: 'transparent'
+        }
+    },
+
+    /**
+     * Styles for toggled buttons in the toolbar.
+     */
+    toggledButtonStyles: {
+        iconStyle: whiteToolbarButtonIcon,
+        style: {
+            ...whiteToolbarButton,
+            borderColor: schemeColor('buttonToggledBorder'),
+            borderWidth: 1
+        }
     }
 });
+

@@ -31,7 +31,9 @@ export default class AbstractInsecureRoomNameLabel extends PureComponent<Props> 
             return null;
         }
 
-        return this._render();
+        return null;
+
+        // return this._render();
     }
 
     /**

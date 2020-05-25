@@ -79,6 +79,15 @@ const styles = {
         paddingHorizontal: BoxModel.margin
     },
 
+    toolbarWrapper: {
+        display: 'flex',
+        'flex-direction': 'column'
+    },
+
+    toolboxSpace: {
+        flex: 'auto'
+    },
+
     /**
      * The style of the root/top-level {@link Container} of {@link Toolbox}.
      */
@@ -103,6 +112,14 @@ ColorSchemeRegistry.register('Toolbox', {
     },
 
     buttonStylesBorderless: {
+        iconStyle: whiteToolbarButtonIcon,
+        style: {
+            ...toolbarButton,
+            backgroundColor: 'transparent'
+        }
+    },
+
+    buttonStylesBorderlessAtTop: {
         iconStyle: whiteToolbarButtonIcon,
         style: {
             ...toolbarButton,
