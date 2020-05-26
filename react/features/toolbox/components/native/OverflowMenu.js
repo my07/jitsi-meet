@@ -116,7 +116,6 @@ class OverflowMenu extends PureComponent<Props, State> {
                 <AudioOnlyButton { ...buttonProps } />
                 <RoomLockButton { ...buttonProps } />
                 <SharedDocumentButton { ...buttonProps } />
-                <HelpButton { ...buttonProps } />
             </BottomSheet>
         );
     }
