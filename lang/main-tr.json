@@ -616,7 +616,7 @@
             "videomute": "Kamerayı aç/kapat",
             "videoblur": ""
         },
-        "addPeople": "Konuşmaya başkalarını da ekle",
+        "addPeople": "Toplantıya arkadaşlarını ekle",
         "audioOnlyOff": "Sadece ses modu kapat",
         "audioOnlyOn": "Sadece ses modunu aç",
         "audioRoute": "Ses cihazı seçin",
@@ -771,7 +771,7 @@
         "roomNamePlaceHolder": "Oda adı..."
     },
     "lonelyMeetingExperience": {
-        "button": "Başkalarını davet et",
+        "button": "Arkadaşlarını davet et",
         "youAreAlone": "Toplantıdaki tek kişisiniz"
     },
     "security": {

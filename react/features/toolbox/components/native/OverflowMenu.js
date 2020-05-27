@@ -17,6 +17,7 @@ import HelpButton from '../HelpButton';
 
 import AudioOnlyButton from './AudioOnlyButton';
 import styles from './styles';
+import RaiseHandButton from "./RaiseHandButton";
 
 /**
  * The type of the React {@code Component} props of {@link OverflowMenu}.
@@ -112,8 +113,8 @@ class OverflowMenu extends PureComponent<Props, State> {
                 onSwipe = { this._onSwipe }
                 renderHeader = { this._renderMenuExpandToggle }>
                 <AudioRouteButton { ...buttonProps } />
-                <InviteButton { ...buttonProps } />
                 <AudioOnlyButton { ...buttonProps } />
+                <RaiseHandButton { ...buttonProps } />
                 <RoomLockButton { ...buttonProps } />
                 <SharedDocumentButton { ...buttonProps } />
             </BottomSheet>

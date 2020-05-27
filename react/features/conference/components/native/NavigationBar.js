@@ -17,6 +17,8 @@ import { TileViewButton } from '../../../video-layout/components';
 import ConferenceTimer from '../ConferenceTimer';
 
 import styles, { NAVBAR_GRADIENT_COLORS } from './styles';
+import InviteButton
+    from "../../../invite/components/add-people-dialog/native/InviteButton";
 
 type Props = {
 
@@ -87,8 +89,8 @@ class NavigationBar extends Component<Props> {
                 </View>
                 <View
                     accessibilityRole = 'toolbar'
-                    pointerEvents = 'box-none'
                     style = { styles.toolbar }>
+                    <InviteButton { ...buttonProps } />
                     <RaiseHandButton { ...buttonProps } />
                     <TileViewButton { ...buttonProps } />
                     <ToggleCameraButton { ...buttonProps } />

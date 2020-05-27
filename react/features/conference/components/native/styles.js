@@ -29,9 +29,14 @@ export default {
      */
     conference: fixAndroidViewClipping({
         alignSelf: 'stretch',
-        backgroundColor: ColorPalette.appBackground,
         flex: 1
     }),
+
+    ahtapotBackground: {
+        flex: 1,
+        resizeMode: 'repeat',
+        justifyContent: 'center'
+    },
 
     gradient: {
         position: 'absolute',
@@ -135,7 +140,7 @@ export default {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        height: 44,
+        height: 70,
         justifyContent: 'space-between',
         paddingHorizontal: 14
     },
@@ -155,9 +160,9 @@ export default {
     roomNameWrapper: {
         flexDirection: 'column',
         alignItems: 'flex-start',
-        top: 10,
+        top: 60,
         left: 0,
-        paddingHorizontal: 48,
+        paddingHorizontal: 20,
         position: 'absolute',
         right: 0
     },
@@ -192,8 +197,8 @@ export default {
     toolbar: {
         alignItems: 'center',
         flexDirection: 'row',
-        flexGrow: 1,
-        justifyContent: 'flex-end',
+        flexGrow: 0,
+        justifyContent: 'center',
         marginBottom: BoxModel.margin / 2,
         paddingHorizontal: BoxModel.margin
     }
@@ -225,7 +230,7 @@ const toolbarButton = {
 const toolbarButtonIcon = {
     alignSelf: 'center',
     color: ColorPalette.darkGrey,
-    fontSize: 22
+    fontSize: 26
 };
 
 /**

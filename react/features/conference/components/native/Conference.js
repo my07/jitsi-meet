@@ -1,9 +1,10 @@
 // @flow
 
 import React from 'react';
-import { NativeModules, SafeAreaView, StatusBar } from 'react-native';
+import { NativeModules, SafeAreaView, StatusBar, ImageBackground } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
+import AhtapotBackground from '../../../../../images/AhtapotBackground.png';
 import { appNavigate } from '../../../app';
 import { PIP_ENABLED, getFeatureFlag } from '../../../base/flags';
 import { Container, LoadingIndicator, TintedView } from '../../../base/react';
@@ -169,7 +170,11 @@ class Conference extends AbstractConference<Props, *> {
                     barStyle = 'light-content'
                     hidden = { true }
                     translucent = { true } />
-                { this._renderContent() }
+                <ImageBackground
+                    source = { AhtapotBackground }
+                    style = { styles.ahtapotBackground } >
+                    { this._renderContent() }
+                </ImageBackground>
             </Container>
         );
     }
