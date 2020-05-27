@@ -140,7 +140,7 @@ export default {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        height: 70,
+        height: 44,
         justifyContent: 'space-between',
         paddingHorizontal: 14
     },
@@ -160,9 +160,10 @@ export default {
     roomNameWrapper: {
         flexDirection: 'column',
         alignItems: 'flex-start',
-        top: 60,
+        top: 15,
         left: 0,
-        paddingHorizontal: 20,
+        paddingLeft: 20,
+        paddingRight: 110,
         position: 'absolute',
         right: 0
     },
@@ -195,10 +196,11 @@ export default {
      * The style of the toolbar.
      */
     toolbar: {
+        marginTop: 10,
         alignItems: 'center',
         flexDirection: 'row',
-        flexGrow: 0,
-        justifyContent: 'center',
+        flexGrow: 1,
+        justifyContent: 'flex-end',
         marginBottom: BoxModel.margin / 2,
         paddingHorizontal: BoxModel.margin
     }

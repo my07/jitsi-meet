@@ -72,8 +72,7 @@ class NavigationBar extends Component<Props> {
                 key = { 2 }
                 pointerEvents = 'box-none'
                 style = { styles.navBarWrapper }>
-                <PictureInPictureButton
-                    styles = { styles.navBarButton } />
+                {/* <PictureInPictureButton styles = { styles.navBarButton } /> */}
                 <View
                     pointerEvents = 'box-none'
                     style = { styles.roomNameWrapper }>
@@ -90,8 +89,6 @@ class NavigationBar extends Component<Props> {
                 <View
                     accessibilityRole = 'toolbar'
                     style = { styles.toolbar }>
-                    <InviteButton { ...buttonProps } />
-                    <RaiseHandButton { ...buttonProps } />
                     <TileViewButton { ...buttonProps } />
                     <ToggleCameraButton { ...buttonProps } />
                 </View>

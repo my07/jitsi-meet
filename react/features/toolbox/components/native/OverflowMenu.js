@@ -114,6 +114,7 @@ class OverflowMenu extends PureComponent<Props, State> {
                 renderHeader = { this._renderMenuExpandToggle }>
                 <AudioRouteButton { ...buttonProps } />
                 <AudioOnlyButton { ...buttonProps } />
+                <InviteButton { ...buttonProps } />
                 <RaiseHandButton { ...buttonProps } />
                 <RoomLockButton { ...buttonProps } />
                 <SharedDocumentButton { ...buttonProps } />
