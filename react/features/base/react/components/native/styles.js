@@ -42,7 +42,7 @@ const PAGED_LIST_STYLES = {
      */
     pageIndicatorContainer: {
         alignItems: 'center',
-        backgroundColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
@@ -57,7 +57,7 @@ const PAGED_LIST_STYLES = {
      * Icon of the page indicator (Android).
      */
     pageIndicatorIcon: {
-        color: ColorPalette.blueHighlight,
+        color: ColorPalette.ahtapotHighlight,
         fontSize: 24
     },
 
@@ -65,7 +65,7 @@ const PAGED_LIST_STYLES = {
      * Label of the page indicator (Android).
      */
     pageIndicatorText: {
-        color: ColorPalette.blueHighlight
+        color: ColorPalette.ahtapotHighlight
     },
 
     /**
@@ -185,7 +185,7 @@ const SECTION_LIST_STYLES = {
 
     secondaryActionContainer: {
         alignItems: 'center',
-        backgroundColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
         borderRadius: 3,
         height: SECONDARY_ACTION_BUTTON_SIZE,
         justifyContent: 'center',

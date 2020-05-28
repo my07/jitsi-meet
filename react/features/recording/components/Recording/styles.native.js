@@ -44,7 +44,7 @@ ColorSchemeRegistry.register('StartRecordingDialogContent', {
     },
 
     signButton: {
-        backgroundColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
         color: ColorPalette.white,
         fontSize: 16,
         borderRadius: 5,

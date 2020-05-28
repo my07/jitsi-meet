@@ -25,15 +25,15 @@ export const LABEL_SIZE = 36;
 export default {
 
     expandedLabelArrow: {
-        backgroundColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
         height: 15,
         transform: [ { rotate: '45deg' }, { translateX: 10 } ],
         width: 15
     },
 
     expandedLabelContainer: {
-        backgroundColor: ColorPalette.blue,
-        borderColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
+        borderColor: ColorPalette.ahtapot,
         borderRadius: 6,
         marginHorizontal: BoxModel.margin,
         padding: BoxModel.padding

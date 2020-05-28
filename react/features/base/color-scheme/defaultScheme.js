@@ -24,18 +24,18 @@ export default {
         replyIcon: 'rgb(94, 109, 121)'
     },
     'Conference': {
-        inviteButtonBackground: 'rgb(0, 119, 225)',
+        inviteButtonBackground: '#252525',
         onVideoText: 'white'
     },
     'Dialog': {
         border: 'rgba(0, 3, 6, 0.6)',
-        buttonBackground: ColorPalette.blue,
+        buttonBackground: ColorPalette.ahtapot,
         buttonLabel: ColorPalette.white
     },
     'Header': {
-        background: ColorPalette.blue,
+        background: ColorPalette.ahtapot,
         icon: ColorPalette.white,
-        statusBar: ColorPalette.blueHighlight,
+        statusBar: ColorPalette.ahtapotHighlight,
         statusBarContent: ColorPalette.white,
         text: ColorPalette.white
     },

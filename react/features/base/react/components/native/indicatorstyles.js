@@ -7,7 +7,7 @@ export default {
      * Highlighted indicator additional style.
      */
     highlightedIndicator: {
-        backgroundColor: ColorPalette.blue,
+        backgroundColor: ColorPalette.ahtapot,
         borderRadius: 16,
         padding: 4
     },

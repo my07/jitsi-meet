@@ -133,7 +133,7 @@ ColorSchemeRegistry.register('Toolbox', {
      */
     chatButtonOverride: {
         toggled: {
-            backgroundColor: ColorPalette.blue
+            backgroundColor: ColorPalette.ahtapot
         }
     },
 
